@@ -5,15 +5,19 @@ Abstract:
 The main view controller.
 */
 
-import AppKit
+import UIKit
 import CoreLocation
 import MapKit
-import SeniorDesign
+import SwiftUI
 
-class IndoorMapViewController: NSViewController, MKMapViewDelegate, LevelPickerDelegate {
+class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate {
     @IBOutlet var mapView: MKMapView!
     private let locationManager = CLLocationManager()
     @IBOutlet var levelPicker: LevelPickerView!
+    
+    @State private var buildingSearchText: String = ""
+//    @FocusState private var buildingSearchTextFocused: Bool
+    @State private var roomSearchText: String = ""
     
     var venue: Venue?
     private var levels: [Level] = []
@@ -27,6 +31,13 @@ class IndoorMapViewController: NSViewController, MKMapViewDelegate, LevelPickerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let navigateSection = NavigateSectionView()
+//        let overlayView = UIView()
+//        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+//        overlayView.frame = CGRect(x: 0, y: 0, width: view.bounds.width/2, height: view.bounds.height/2)
+        self.view.addSubview(navigateSection)
+        self.view.bringSubviewToFront(navigateSection)
 
         // Request location authorization so the user's current location can be displayed on the map
         locationManager.requestWhenInUseAuthorization()
