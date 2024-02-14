@@ -3,24 +3,24 @@
         {
             "feature_type": "occupant",
             "geometry": null,
-            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e38",
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e39",
             "properties": {
                 "address_id": null,
                 "alt_name": null,
-                "anchor_id": "bc57ca27-c994-4cba-8fae-10c8a52032d1",
-                "category": "restaurant",
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba0",
+                "category": "medicalsupplies",
                 "display_point": {
                     "coordinates": [
-                       -121.8878608,
-                        37.3294221
-                      ],
+    -66.6666,
+    66.6666
+],
                     "type": "Point"
                 },
                 "hours": "Su-Sa 09:00-17:00",
                 "name": {
-                    "en": "Jurassic Table"
+                    "en": "Random Point"
                 },
-                "phone": "+14087924511",
+                "phone": "+14087924512",
                 "restriction": null,
                 "website": null,
                 "correlation_id": null
@@ -35,17 +35,314 @@
                 "address_id": null,
                 "alt_name": null,
                 "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba1",
-                "category": "shopping",
+                "category": "medicalsupplies",
                 "display_point": {
                     "coordinates": [
-	                    -121.889609,
-	                    37.329678
-                      ],
+    -66.6666,
+    66.6666
+],
                     "type": "Point"
                 },
                 "hours": "Su-Sa 09:00-17:00",
                 "name": {
-                    "en": "Dinoshop"
+                    "en": "Medication Prep"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3a",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba2",
+                "category": "pharmacy",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "Pharmacy Program"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3b",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba3",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "104"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3c",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba4",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "105"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3d",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba5",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "106"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3e",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba6",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "107"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e3f",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba7",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "108"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e40",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba8",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "108A"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e41",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54ba9",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "108B"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e42",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54baa",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "109"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e43",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bab",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "102"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": null,
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e44",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bac",
+                "category": "office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "100"
                 },
                 "phone": "+14087924512",
                 "restriction": null,
@@ -54,7 +351,6 @@
             },
             "type": "Feature"
         }
-        
     ],
     "name": "Occupant",
     "type": "FeatureCollection"

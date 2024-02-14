@@ -20,7 +20,7 @@ class NavigateSectionView: UIView {
 
     private let setLocationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Building 7: Room 5"
+        label.text = "Building 3"
         label.font = UIFont(name: "DMSans-Regular", size: 12)
         label.textColor = .black
         return label

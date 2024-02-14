@@ -10,13 +10,13 @@
                 "category": "unspecified",
                 "display_point": {
                     "coordinates": [
-                        -121.889164,
-                        37.32925
-                    ],
+    66.6666,
+    66.6666
+],
                     "type": "Point"
                 },
                 "name": {
-                    "en": "San Jose McEnery Convention Center"
+                    "en": "Robert J. Dole VA Hospital"
                 },
                 "restriction": null
             },

@@ -1,6 +1,6 @@
 //
 //  helpers.swift
-//  seniorDesign
+//  SeniorDesign
 //
 //  Created by Steven Janssen on 11/15/23.
 //  Copyright © 2023 Apple. All rights reserved.

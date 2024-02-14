@@ -43,7 +43,7 @@
 		75E7ED09E5BC9AB9BC056378 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		7E4BF84622160D8B00AE3916 /* Amenity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amenity.swift; sourceTree = "<group>"; };
 		7E4CC6C72242206000724B06 /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
-		7E61CEFC215E1FF500EAD172 /* seniorDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seniorDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E61CEFC215E1FF500EAD172 /* SeniorDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E61CEFF215E1FF500EAD172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E61CF01215E1FF500EAD172 /* IndoorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorMapViewController.swift; sourceTree = "<group>"; };
 		7E61CF04215E1FF500EAD172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		7E61CEFD215E1FF500EAD172 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E61CEFC215E1FF500EAD172 /* seniorDesign.app */,
+				7E61CEFC215E1FF500EAD172 /* SeniorDesign.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7E61CEFB215E1FF500EAD172 /* seniorDesign */ = {
+		7E61CEFB215E1FF500EAD172 /* SeniorDesign */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E61CF0E215E1FF600EAD172 /* Build configuration list for PBXNativeTarget "seniorDesign" */;
+			buildConfigurationList = 7E61CF0E215E1FF600EAD172 /* Build configuration list for PBXNativeTarget "SeniorDesign" */;
 			buildPhases = (
 				7E61CEF8215E1FF500EAD172 /* Sources */,
 				7E61CEF9215E1FF500EAD172 /* Frameworks */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = seniorDesign;
+			name = SeniorDesign;
 			productName = IMDF_Sample_Code;
-			productReference = 7E61CEFC215E1FF500EAD172 /* seniorDesign.app */;
+			productReference = 7E61CEFC215E1FF500EAD172 /* SeniorDesign.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 				TargetAttributes = {
 					7E61CEFB215E1FF500EAD172 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -226,7 +226,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7E61CEFB215E1FF500EAD172 /* seniorDesign */,
+				7E61CEFB215E1FF500EAD172 /* SeniorDesign */,
 			);
 		};
 /* End PBXProject section */
@@ -417,13 +417,14 @@
 			baseConfigurationReference = 0E4DF414B6CA3700FEC8FA74 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = seniorDesign/Info.plist;
+				INFOPLIST_FILE = SeniorDesign/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -432,6 +433,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SeniorDesign${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -441,13 +444,14 @@
 			baseConfigurationReference = 0E4DF414B6CA3700FEC8FA74 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = seniorDesign/Info.plist;
+				INFOPLIST_FILE = SeniorDesign/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.SeniorDesign${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -472,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E61CF0E215E1FF600EAD172 /* Build configuration list for PBXNativeTarget "seniorDesign" */ = {
+		7E61CF0E215E1FF600EAD172 /* Build configuration list for PBXNativeTarget "SeniorDesign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E61CF0F215E1FF600EAD172 /* Debug */,
