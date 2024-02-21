@@ -7,7 +7,7 @@ _member’s GitHubIDs and names: MetaJT (Jordan Trotter), greentyler111 (Steven 
 ## BLE Sensor Research
 _Goal is to find a reliable Low Energy Bluetooth beacon that we can use for a sense of location while indoors_
 1. [FEASYCOM](https://www.amazon.com/programmable-Battery-Bluetooth-eddystone-Technology/dp/B078N2B7RD/ref=asc_df_B078N2B7RD/?tag=hyprod-20&linkCode=df0&hvadid=241965663546&hvpos=&hvnetw=g&hvrand=10042743716919065296&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9024247&hvtargid=pla-486845475033&psc=1&mcid=28dd533fdf473f068e4a01772e7c6224&gclid=CjwKCAiA29auBhBxEiwAnKcSqoCoc_4hhqeMp5lkZ-stfxS8rYdn4bvepKq2QtAFktOopiRQPy92ORoCDMQQAvD_BwE)
-   - Comes from Amazon (So would arrive w/in the week)
+   - From Amazon (So would arrive w/in the week)
    - Supports iBeacon
    - "Long Range 500m"
    - Takes 2 AAA batteries "5 year life"
@@ -15,16 +15,33 @@ _Goal is to find a reliable Low Energy Bluetooth beacon that we can use for a se
    - Price: $17.99/per
 2. [FEASYCOM FSC-BP103B](https://www.amazon.com/FeasyBeacon-Bluetooth-Proximity-Eddystone-programmable/dp/B077FQ6HLV/ref=pd_bxgy_img_d_sccl_1/137-3622995-4362555?pd_rd_w=fcy5M&content-id=amzn1.sym.2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_p=2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_r=W9MXSF1CERJC91764HKN&pd_rd_wg=vvO0c&pd_rd_r=61e169f2-adaa-4c79-befe-1e0b5400c89b&pd_rd_i=B077FQ6HLV&psc=1)
    - Same company as option 1
-   - Comes from Amazon
+   - From Amazon
    - Price: $15.99
    - Range: "160m" but sounds more for open area, might not be good for indoor use
    - Reviews are lower than option 1
      > "Doesn't work with iPhone"
 
      > "No instructions"
-3. [AliExpress](https://www.aliexpress.us/item/3256805206942463.html?spm=a2g0o.productlist.main.35.5500744clFai2Y&algo_pvid=2e7479bb-9379-469c-85fa-64f6fb508c70&algo_exp_id=2e7479bb-9379-469c-85fa-64f6fb508c70-17&pdp_npi=4%40dis%21USD%2110.00%214.90%21%21%2110.00%214.90%21%402103011117085391551975781ebc44%2112000032877228018%21sea%21US%210%21AB&curPageLogUid=XqDoK5ksvqSE&utparam-url=scene%3Asearch%7Cquery_from%3A)
-   - Overseas company (This would take time to arrive)
-   - Lots of low cost options
-   - Bluetooth options don't have a lot of reviews
-   - Price: $4.90/per
+3. [Blue Charm Beacons - BC05](https://www.amazon.com/dp/B0CLN34NHK?ref=emc_s_m_5_i_n)
+   - From Amazon
+   - Price: $21.95
+   - Range: "100m"
+   - Supports iBeacon
+   - Lithium-Ion battery(CR2477) "4 year life"
+   - Only 2 ratings (Both 5 stars) and no reviews
+4. [Blue Charm Beacons - BCO04P](https://www.amazon.com/dp/B0BMY36FQ1?ref=emc_s_m_5_i_n)
+   - From Amazon
+   - Price: $21.95
+   - Range: "150m"
+   - Supports iBeacon
+   - Lithium-Ion battery(CR2477) "4 year life"
+   - 4.4/5 stars from 4 ratings and 2 positive reviews
+   - Think this might be the best option
+5. [Blue Charm Beacnos - BC063B](https://www.amazon.com/Blue-Charm-Beacons-Water-Resistant-BC063B-iBeacon/dp/B07Z1FR6GY/ref=sr_1_10?crid=MUL1TEHMUN8Z&dib=eyJ2IjoiMSJ9.HqGVwXxaQ0RaD0v7qTlpKwYJaUw3AmSz610Z_4E7o6gsm9NaA4heTWCGYC8EuupquQ_gb-mgK4beIfwYUy86_xvZuXhGcLcp9aluBQw-PfIjSOrsDIMZaB1RQQ-p4H-jfMghZcIxAJphUrR-ELUOMQ.8kzVhwEGBgdhF4yJTWfucgKRqsBhB_YIkeFLO8NL_p0&dib_tag=se&keywords=Bluetooth+BLE+iBeacon+%28BC037S-SmoothPattern-iBeacon%29&qid=1708540770&sprefix=bluetooth+ble+ibeacon+bc037s-smoothpattern-ibeacon+%2Caps%2C189&sr=8-10)
+   - From Amazon
+   - Price: $16.95
+   - Range: "50m"
+   - Supports iBeacon
+   - Lithium-Ion battery(CR2477) "4 year life"
+   - 3.6/5 stars from 15 ratings with mixed reviews
 
