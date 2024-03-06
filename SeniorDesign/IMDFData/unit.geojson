@@ -2,6 +2,36 @@
   "type": "FeatureCollection",
   "name": "unit",
   "features": [
+      {
+        "id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd41",
+        "type": "Feature",
+        "feature_type": "unit",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-97.27429,37.68120],
+              [-97.27510,37.68120],
+              [-97.27510,37.68120],
+              [-97.27429,37.68120]
+            ]
+          ]
+        },
+        "properties": {
+          "category": "road",
+          "restriction": null,
+          "accessibility": null,
+          "name": {
+            "en": "Ball Room"
+          },
+          "alt_name": null,
+          "display_point": {
+            "type": "Point",
+            "coordinates": [ -97.27475,37.68121 ],
+          },
+          "level_id": "1f97ee2d-e09b-4737-8ccd-6eb15c1f5541"
+        }
+      },
     {
       "type": "Feature",
       "feature_type": "unit",

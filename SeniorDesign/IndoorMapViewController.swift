@@ -10,14 +10,17 @@ import CoreLocation
 import MapKit
 import SwiftUI
 
-class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate {
+class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate, UISearchBarDelegate {
     @IBOutlet var mapView: MKMapView!
     private let locationManager = CLLocationManager()
     @IBOutlet var levelPicker: LevelPickerView!
+    @IBOutlet var searchRoomField: UISearchBar!
+    @IBOutlet var searchActualRoomField: UISearchBar!
     
     @State private var buildingSearchText: String = ""
 //    @FocusState private var buildingSearchTextFocused: Bool
     @State private var roomSearchText: String = ""
+    @State private var savedLevel: Int = 0
     
     var venue: Venue?
     private var levels: [Level] = []
@@ -27,10 +30,19 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     let pointAnnotationViewIdentifier = "PointAnnotationView"
     let labelAnnotationViewIdentifier = "LabelAnnotationView"
     
+    private var searchAnnotations: [MKAnnotation] = []
+    private var anchorData: [AnchorB] = []
+    private var occupantData: [OccupantB] = []
+    
     // MARK: - View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchRoomField.delegate = self
+        searchActualRoomField.delegate = self
+        
+        loadJsonData()
         
         let navigateSection = NavigateSectionView()
 //        let overlayView = UIView()
@@ -81,6 +93,88 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         
         // Setup the level picker with the shortName of each level
         setupLevelPicker()
+    }
+    
+    func loadJsonData() {
+        guard let anchorUrl = Bundle.main.url(forResource: "IMDFData/anchor", withExtension: "geojson")
+        else {
+            print("json file not found")
+            return
+        }
+        let anchordata = try? Data(contentsOf: anchorUrl)
+        guard let occupantUrl = Bundle.main.url(forResource: "IMDFData/occupant", withExtension: "geojson")
+        else {
+            print("json file not found")
+            return
+        }
+        let occupantdata = try? Data(contentsOf: occupantUrl)
+        
+        let decoder = JSONDecoder()
+        let decoderNew = JSONDecoder()
+        do {
+            let jsonData = try decoder.decode(MainAnchor.self, from: anchordata!)
+            self.anchorData = jsonData.features
+            let newjsonData = try decoderNew.decode(MainOccupant.self, from: occupantdata!)
+            self.occupantData = newjsonData.features
+        } catch {
+            print("Error in JSON parsing")
+            return
+        }
+    }
+    
+    func lookupAnchorCoords(anchorId: String) -> [Double] {
+        for anchor in self.anchorData {
+            if anchor.id == anchorId {
+                return anchor.geometry.coordinates
+            }
+        }
+        return []
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.mapView.removeAnnotations(self.searchAnnotations)
+        self.searchAnnotations = []
+        if levelPicker.selectedIndex != nil {
+            self.savedLevel = levelPicker.selectedIndex!
+        }
+        levelPicker.selectedIndex = nil
+        
+        if (self.searchRoomField.text == "" && self.searchActualRoomField.text == "") {
+            levelPicker.selectedIndex = self.savedLevel
+            return
+        }
+        
+        if (self.searchActualRoomField.text == "") { // If the Room Search bar has no text, select all rooms in the building
+            levelPicker.selectedIndex = self.savedLevel
+            for occupant in self.occupantData {
+                if (occupant.properties.website == "Building " + self.searchRoomField.text!) {
+                    let annotation = MKPointAnnotation()
+                    let coords: [Double] = lookupAnchorCoords(anchorId: occupant.properties.anchor_id)
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: coords[1], longitude: coords[0])
+                    annotation.title = ""
+                    self.mapView.addAnnotation(annotation)
+                    self.searchAnnotations.append(annotation)
+                }
+            }
+        } else { // Both fields have text, so search for a specific room
+            for occupant in self.occupantData {
+                if (occupant.properties.website == "Building " + self.searchRoomField.text! && occupant.properties.name.en == self.searchActualRoomField.text!) {
+                    let annotation = MKPointAnnotation()
+                    let coords: [Double] = lookupAnchorCoords(anchorId: occupant.properties.anchor_id)
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: coords[1], longitude: coords[0])
+                    annotation.title = occupant.properties.website + " - " + occupant.properties.name.en
+                    self.mapView.addAnnotation(annotation)
+                    self.searchAnnotations.append(annotation)
+                    
+                    // Clear out the previously-displayed level's geometry
+                    self.currentLevelFeatures.removeAll()
+                    self.mapView.removeOverlays(self.currentLevelOverlays)
+                    self.mapView.removeAnnotations(self.currentLevelAnnotations)
+                    self.currentLevelAnnotations.removeAll()
+                    self.currentLevelOverlays.removeAll()
+                }
+            }
+        }
     }
     
     private func showFeaturesForOrdinal(_ ordinal: Int) {

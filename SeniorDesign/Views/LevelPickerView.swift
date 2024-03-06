@@ -83,7 +83,7 @@ class LevelPickerView: UIView {
             buttons.append(levelButton)
         }
     }
-    
+
     @objc
     private func levelSelected(sender: UIButton) {
         let selectedIndex = sender.tag

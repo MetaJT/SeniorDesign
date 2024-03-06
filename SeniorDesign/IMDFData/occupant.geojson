@@ -22,7 +22,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -49,7 +49,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -76,7 +76,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -103,7 +103,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -130,7 +130,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -157,7 +157,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -184,7 +184,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -211,7 +211,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -238,7 +238,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -265,7 +265,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -292,7 +292,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -319,7 +319,7 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
                 "correlation_id": null
             },
             "type": "Feature"
@@ -346,7 +346,250 @@
                 },
                 "phone": "+14087924512",
                 "restriction": null,
-                "website": null,
+                "website": "Building 3",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e45",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bad",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153F"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e46",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bae",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e47",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54baf",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153C"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e48",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb0",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153B"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e49",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb1",
+                "category": "Nurse Workstation",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153A"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4a",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb2",
+                "category": "Waiting Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "153K"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4b",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb3",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "152"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4c",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb4",
+                "category": "Evidence Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "123"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4d",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb5",
+                "category": "Arms Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "122"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
                 "correlation_id": null
             },
             "type": "Feature"
