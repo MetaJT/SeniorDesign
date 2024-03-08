@@ -6,11 +6,11 @@ _member’s GitHubIDs (Names): MetaJT (Jordan Trotter), greentyler111 (Steven Ja
 
 ## BLE Sensor Research
 _Goal: Find a reliable Low Energy Bluetooth beacon that we can use for a sense of location while indoors_
-~~1. [FEASYCOM](https://www.amazon.com/programmable-Battery-Bluetooth-eddystone-Technology/dp/B078N2B7RD/ref=asc_df_B078N2B7RD/?tag=hyprod-20&linkCode=df0&hvadid=241965663546&hvpos=&hvnetw=g&hvrand=10042743716919065296&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9024247&hvtargid=pla-486845475033&psc=1&mcid=28dd533fdf473f068e4a01772e7c6224&gclid=CjwKCAiA29auBhBxEiwAnKcSqoCoc_4hhqeMp5lkZ-stfxS8rYdn4bvepKq2QtAFktOopiRQPy92ORoCDMQQAvD_BwE)~~
+1. ~~[FEASYCOM](https://www.amazon.com/programmable-Battery-Bluetooth-eddystone-Technology/dp/B078N2B7RD/ref=asc_df_B078N2B7RD/?tag=hyprod-20&linkCode=df0&hvadid=241965663546&hvpos=&hvnetw=g&hvrand=10042743716919065296&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9024247&hvtargid=pla-486845475033&psc=1&mcid=28dd533fdf473f068e4a01772e7c6224&gclid=CjwKCAiA29auBhBxEiwAnKcSqoCoc_4hhqeMp5lkZ-stfxS8rYdn4bvepKq2QtAFktOopiRQPy92ORoCDMQQAvD_BwE)~~
 
-~~2. [FEASYCOM FSC-BP103B](https://www.amazon.com/FeasyBeacon-Bluetooth-Proximity-Eddystone-programmable/dp/B077FQ6HLV/ref=pd_bxgy_img_d_sccl_1/137-3622995-4362555?pd_rd_w=fcy5M&content-id=amzn1.sym.2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_p=2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_r=W9MXSF1CERJC91764HKN&pd_rd_wg=vvO0c&pd_rd_r=61e169f2-adaa-4c79-befe-1e0b5400c89b&pd_rd_i=B077FQ6HLV&psc=1)~~
+2. ~~[FEASYCOM FSC-BP103B](https://www.amazon.com/FeasyBeacon-Bluetooth-Proximity-Eddystone-programmable/dp/B077FQ6HLV/ref=pd_bxgy_img_d_sccl_1/137-3622995-4362555?pd_rd_w=fcy5M&content-id=amzn1.sym.2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_p=2b132e63-5dcd-4ba1-be9f-9e044543d59f&pf_rd_r=W9MXSF1CERJC91764HKN&pd_rd_wg=vvO0c&pd_rd_r=61e169f2-adaa-4c79-befe-1e0b5400c89b&pd_rd_i=B077FQ6HLV&psc=1)~~
 
-~~3. [Blue Charm Beacons - BC05](https://www.amazon.com/dp/B0CLN34NHK?ref=emc_s_m_5_i_n)~~
+3. ~~[Blue Charm Beacons - BC05](https://www.amazon.com/dp/B0CLN34NHK?ref=emc_s_m_5_i_n)~~
 
 4. [Blue Charm Beacons - BCO04P](https://www.amazon.com/dp/B0BMY36FQ1?ref=emc_s_m_5_i_n)
    - From Amazon
