@@ -593,6 +593,762 @@
                 "correlation_id": null
             },
             "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4e",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb6",
+                "category": "SPD Storage",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "151"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e4f",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb7",
+                "category": "Break Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "150"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e50",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb8",
+                "category": "radiology",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "148"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e51",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bb9",
+                "category": "Escort Office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "147"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e52",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bba",
+                "category": "Stairs",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "Stairs"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e53",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bbb",
+                "category": "Men's Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "107"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e54",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bbc",
+                "category": "Office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "109"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e55",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bbd",
+                "category": "Telecom",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "108"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e56",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bbe",
+                "category": "CT Scan Controls",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "110"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e57",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bbf",
+                "category": "CT Scanner",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "111"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e58",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc0",
+                "category": "CT Scanner",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "111"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e59",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc1",
+                "category": "Elevator",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "Elevator"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5a",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc2",
+                "category": "ID Area",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "113"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5b",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc3",
+                "category": "Women's Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "143"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5c",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc4",
+                "category": "Copy Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "125"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5d",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc5",
+                "category": "Office",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "118"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5e",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc6",
+                "category": "IT Closet",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "131-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e5f",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc7",
+                "category": "MAS Waiting",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "129-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e60",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc8",
+                "category": "Interview",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "130-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e61",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bc9",
+                "category": "MAS Work Area",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "133-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e62",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bca",
+                "category": "MAS Chief",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "135-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e63",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bcb",
+                "category": "DEPT Chief",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "136-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e64",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bcc",
+                "category": "Shared Lounge",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "138-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e65",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bcd",
+                "category": "Corridor",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "127-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e66",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bce",
+                "category": "Waiting Area",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "139-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e67",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bcf",
+                "category": "Chemo & Exam Area",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "Chemo & Exam Area"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e68",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd0",
+                "category": "Stairs",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "Stairs"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e69",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd1",
+                "category": "Patient Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "216-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
         }
     ],
     "name": "Occupant",

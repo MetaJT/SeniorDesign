@@ -42,11 +42,62 @@
                 "name": {
                     "en": "Level 1"
                 },
-                "ordinal": -1,
+                "ordinal": 0,
                 "outdoor": false,
                 "restriction": null,
                 "short_name": {
                     "en": "L1"
+                }
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "level",
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+    -97.27361,
+    37.68123
+],
+                        [
+    -97.27361,
+    37.68123
+],
+                        [
+    -97.27361,
+    37.68123
+],
+                        [
+    -97.27361,
+    37.68123
+]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "id": "1f97ee2d-e09b-4737-8ccd-6eb15c1f5542",
+            "properties": {
+                "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+                "building_ids": [
+                    "26f04b4f-9ae2-45e3-99d1-393c66d58eb4"
+                ],
+                "category": "unspecified",
+                "display_point": {
+                    "coordinates": [
+    -107.27361,
+    37.68123
+],
+                    "type": "Point"
+                },
+                "name": {
+                    "en": "Level 2"
+                },
+                "ordinal": 1,
+                "outdoor": false,
+                "restriction": null,
+                "short_name": {
+                    "en": "L2"
                 }
             },
             "type": "Feature"
