@@ -1349,6 +1349,114 @@
                 "correlation_id": null
             },
             "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e6a",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd2",
+                "category": "Patient Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "208-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e6b",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd3",
+                "category": "Patient Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "204-1"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e6c",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd4",
+                "category": "Bed Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "263"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "occupant",
+            "geometry": null,
+            "id": "5ac4bf40-2dbf-4bdb-9c39-495c442b7e6d",
+            "properties": {
+                "address_id": null,
+                "alt_name": null,
+                "anchor_id": "76336b53-81c9-4c93-8f81-a4c008d54bd5",
+                "category": "Bed Room",
+                "display_point": {
+                    "coordinates": [
+    -66.6666,
+    66.6666
+],
+                    "type": "Point"
+                },
+                "hours": "Su-Sa 09:00-17:00",
+                "name": {
+                    "en": "261"
+                },
+                "phone": "+14087924512",
+                "restriction": null,
+                "website": "Building 1",
+                "correlation_id": null
+            },
+            "type": "Feature"
         }
     ],
     "name": "Occupant",

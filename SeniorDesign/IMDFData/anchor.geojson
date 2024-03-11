@@ -799,6 +799,70 @@
                 "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
             },
             "type": "Feature"
+        },
+        {
+            "feature_type": "anchor",
+            "geometry": {
+                "coordinates": [
+                    -97.27507,
+                    37.68110
+                ],
+                "type": "Point"
+            },
+            "id": "76336b53-81c9-4c93-8f81-a4c008d54bd2",
+            "properties": {
+                "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+                "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "anchor",
+            "geometry": {
+                "coordinates": [
+                    -97.27492,
+                    37.68106
+                ],
+                "type": "Point"
+            },
+            "id": "76336b53-81c9-4c93-8f81-a4c008d54bd3",
+            "properties": {
+                "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+                "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "anchor",
+            "geometry": {
+                "coordinates": [
+                    -97.27416,
+                    37.68129
+                ],
+                "type": "Point"
+            },
+            "id": "76336b53-81c9-4c93-8f81-a4c008d54bd4",
+            "properties": {
+                "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+                "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
+            },
+            "type": "Feature"
+        },
+        {
+            "feature_type": "anchor",
+            "geometry": {
+                "coordinates": [
+                    -97.27431,
+                    37.68130
+                ],
+                "type": "Point"
+            },
+            "id": "76336b53-81c9-4c93-8f81-a4c008d54bd5",
+            "properties": {
+                "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+                "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
+            },
+            "type": "Feature"
         }
     ],
     "name": "Anchor",

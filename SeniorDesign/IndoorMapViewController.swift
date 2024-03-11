@@ -20,7 +20,6 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     @State private var buildingSearchText: String = ""
 //    @FocusState private var buildingSearchTextFocused: Bool
     @State private var roomSearchText: String = ""
-    @State private var savedLevel: Int = 1
     
     var venue: Venue?
     private var levels: [Level] = []
@@ -33,6 +32,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var searchAnnotations: [MKAnnotation] = []
     private var anchorData: [AnchorB] = []
     private var occupantData: [OccupantB] = []
+    private var savedLevel: Int = 1
     
     // MARK: - View life cycle
     
@@ -138,7 +138,6 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             self.savedLevel = levelPicker.selectedIndex!
         }
         levelPicker.selectedIndex = nil
-        print(self.savedLevel)
         
         if (self.searchRoomField.text == "" && self.searchActualRoomField.text == "") {
             levelPicker.selectedIndex = self.savedLevel
