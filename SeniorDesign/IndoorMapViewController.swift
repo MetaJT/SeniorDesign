@@ -43,6 +43,21 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         searchRoomField.delegate = self
         searchActualRoomField.delegate = self
         
+//        let coordinates = [
+//            CLLocationCoordinate2D(latitude: 37.68136, longitude: -97.27589),
+//            CLLocationCoordinate2D(latitude: 37.68203, longitude: -97.27550),
+//            CLLocationCoordinate2D(latitude: 34.68118, longitude: -97.27495)
+//        ]
+        let coordinates = [
+            CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+            CLLocationCoordinate2D(latitude: 37.3352, longitude: -122.0322),
+            CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437)
+        ]
+        let polyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
+
+        // Add the polyline to a map view
+        self.mapView.addOverlay(polyline)
+        
         loadJsonData()
         
         let navigateSection = NavigateSectionView()
@@ -248,6 +263,8 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             renderer = MKMultiPolylineRenderer(overlay: overlay)
         case is MKPolyline:
             renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.red
+            renderer.lineWidth = 4.0
         default:
             return MKOverlayRenderer(overlay: overlay)
         }
@@ -314,4 +331,10 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         let selectedLevel = self.levels[selectedIndex]
         showFeaturesForOrdinal(selectedLevel.properties.ordinal)
     }
+    
+}
+
+
+extension IndoorMapViewController {
+    
 }
