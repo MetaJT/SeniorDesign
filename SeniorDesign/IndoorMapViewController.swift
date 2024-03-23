@@ -34,6 +34,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var anchorData: [AnchorB] = []
     private var occupantData: [OccupantB] = []
     private var savedLevel: Int = 1
+    private var savedPolyline: MKPolyline = MKPolyline(coordinates: [], count: 0)
     
     // MARK: - View life cycle
     
@@ -65,6 +66,8 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         self.mapView.delegate = self
         self.mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: pointAnnotationViewIdentifier)
         self.mapView.register(LabelAnnotationView.self, forAnnotationViewWithReuseIdentifier: labelAnnotationViewIdentifier)
+        
+        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
 
         // Decode the IMDF data. In this case, IMDF data is stored locally in the current bundle.
         let imdfDirectory = Bundle.main.resourceURL!.appendingPathComponent("IMDFData")
@@ -101,19 +104,21 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         
         // Setup the level picker with the shortName of each level
         setupLevelPicker()
-        
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
-            CLLocationCoordinate2D(latitude: 37.3352, longitude: -122.0322),
-            CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437),
-            CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-        ]
-        let polyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
-
-        // Add the polyline to a map view
-        self.mapView.addOverlay(polyline as MKOverlay)
     }
     
+    @IBAction func navigateButton(_ sender: UIButton) {
+        let coordinates = [
+            CLLocationCoordinate2D(latitude: 37.68107, longitude: -97.27554),
+            CLLocationCoordinate2D(latitude: 37.68109, longitude: -97.27552),
+            CLLocationCoordinate2D(latitude: 37.6812, longitude: -97.27552),
+            CLLocationCoordinate2D(latitude: 37.6812, longitude: -97.27526),
+            CLLocationCoordinate2D(latitude: 37.68122, longitude: -97.27526)
+        ]
+        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
+
+        // Add the polyline to a map view
+        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
+    }
     func loadJsonData() {
         guard let anchorUrl = Bundle.main.url(forResource: "IMDFData/anchor", withExtension: "geojson")
         else {
@@ -152,6 +157,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.mapView.removeAnnotations(self.searchAnnotations)
+        self.mapView.removeOverlay(self.savedPolyline as MKOverlay)
         self.searchAnnotations = []
         if levelPicker.selectedIndex != nil {
             self.savedLevel = levelPicker.selectedIndex!
@@ -162,6 +168,8 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             levelPicker.selectedIndex = self.savedLevel
             return
         }
+        
+        var shouldReturn = false
         
         if (self.searchActualRoomField.text == "") { // If the Room Search bar has no text, select all rooms in the building
             levelPicker.selectedIndex = self.savedLevel
@@ -177,7 +185,11 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             }
         } else { // Both fields have text, so search for a specific room
             for occupant in self.occupantData {
-                if (occupant.properties.website == "Building " + self.searchRoomField.text! && occupant.properties.name.en == self.searchActualRoomField.text!) {
+                var isNumber = false
+                if let _ = Int(occupant.properties.name.en) {
+                    isNumber = true
+                }
+                if (occupant.properties.website == "Building " + self.searchRoomField.text! && (occupant.properties.name.en == self.searchActualRoomField.text! || (isNumber == false && occupant.properties.name.en.range(of: self.searchActualRoomField.text!) != nil))) {
                     let annotation = MKPointAnnotation()
                     let coords: [Double] = lookupAnchorCoords(anchorId: occupant.properties.anchor_id)
                     annotation.coordinate = CLLocationCoordinate2D(latitude: coords[1], longitude: coords[0])
@@ -191,11 +203,13 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
                     self.mapView.removeAnnotations(self.currentLevelAnnotations)
                     self.currentLevelAnnotations.removeAll()
                     self.currentLevelOverlays.removeAll()
-                    return
+                    shouldReturn = true
                 }
             }
         }
-        levelPicker.selectedIndex = self.savedLevel
+        if (shouldReturn == false) {
+            levelPicker.selectedIndex = self.savedLevel
+        }
     }
     
     private func showFeaturesForOrdinal(_ ordinal: Int) {
@@ -260,8 +274,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             case is MKPolyline:
                 renderer = MKPolylineRenderer(overlay: overlay)
                 renderer.strokeColor = UIColor.systemPurple
-                renderer.lineWidth = 4.0
-                print("FIJOEW")
+                renderer.lineWidth = 3.0
             default:
                 return MKOverlayRenderer(overlay: overlay)
             }
