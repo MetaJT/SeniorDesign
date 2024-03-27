@@ -25,4 +25,4 @@ _Goal: Find a reliable Low Energy Bluetooth beacon that we can use for a sense o
 ## Possible Indoor Navigation Frameworks/Source Code
 _Goal: Find existing indoor navigation frameworks to utilize if needed, as creating our own may not be plausible within this time frame_
 1. https://github.com/schollz/find3.git
-   - Bluetooth capability
+2. https://github.com/neXenio/BLE-Indoor-Positioning.git
