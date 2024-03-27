@@ -104,20 +104,20 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         
         // Setup the level picker with the shortName of each level
         setupLevelPicker()
+        
     }
     
     @IBAction func navigateButton(_ sender: UIButton) {
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 37.68107, longitude: -97.27554),
-            CLLocationCoordinate2D(latitude: 37.68109, longitude: -97.27552),
-            CLLocationCoordinate2D(latitude: 37.6812, longitude: -97.27552),
-            CLLocationCoordinate2D(latitude: 37.6812, longitude: -97.27526),
-            CLLocationCoordinate2D(latitude: 37.68122, longitude: -97.27526)
-        ]
-        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
-
-        // Add the polyline to a map view
-        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
+        let currentAddress = CLLocationCoordinate2D(latitude: 37.68107, longitude: -97.27554) // TODO: Make this the blue dot location
+        let coordinates = [currentAddress]
+        // Find the nearest line in the list
+        let closest = closestLine(to: convertToPoint(p: currentAddress), lines: MAP_COORDINATES)
+        
+        
+//        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
+//
+//        // Add the polyline to a map view
+//        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
     }
     func loadJsonData() {
         guard let anchorUrl = Bundle.main.url(forResource: "IMDFData/anchor", withExtension: "geojson")

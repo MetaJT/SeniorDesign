@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		274B548B2B05E2B900F51C31 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B548A2B05E2B900F51C31 /* helpers.swift */; };
 		274B548D2B066E2600F51C31 /* NavigateSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B548C2B066E2600F51C31 /* NavigateSection.swift */; };
+		2778ECBF2BAF800300852E11 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778ECBE2BAF800300852E11 /* Graph.swift */; };
+		2778ECC12BB354A500852E11 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778ECC02BB354A500852E11 /* Navigation.swift */; };
 		279C0D822B9828DB00F69815 /* JSONDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C0D812B9828DB00F69815 /* JSONDataTypes.swift */; };
 		4306A889223825C9005E7E97 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4306A888223825C9005E7E97 /* Styles.swift */; };
 		4353A0932228CD9600F2977B /* IMDFData in Resources */ = {isa = PBXBuildFile; fileRef = 4353A0922228CD9500F2977B /* IMDFData */; };
@@ -38,6 +40,8 @@
 		0E4DF414B6CA3700FEC8FA74 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		274B548A2B05E2B900F51C31 /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		274B548C2B066E2600F51C31 /* NavigateSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateSection.swift; sourceTree = "<group>"; };
+		2778ECBE2BAF800300852E11 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		2778ECC02BB354A500852E11 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		279C0D812B9828DB00F69815 /* JSONDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataTypes.swift; sourceTree = "<group>"; };
 		4306A888223825C9005E7E97 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		4353A0922228CD9500F2977B /* IMDFData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IMDFData; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				7E61CF06215E1FF600EAD172 /* Assets.xcassets */,
 				274B548A2B05E2B900F51C31 /* helpers.swift */,
 				274B548C2B066E2600F51C31 /* NavigateSection.swift */,
+				2778ECBE2BAF800300852E11 /* Graph.swift */,
+				2778ECC02BB354A500852E11 /* Navigation.swift */,
 			);
 			path = SeniorDesign;
 			sourceTree = "<group>";
@@ -257,10 +263,12 @@
 				F70CE090228B5B4D007056C6 /* Anchor.swift in Sources */,
 				436217FD2256A4800075E16C /* LocalizedName.swift in Sources */,
 				274B548B2B05E2B900F51C31 /* helpers.swift in Sources */,
+				2778ECBF2BAF800300852E11 /* Graph.swift in Sources */,
 				274B548D2B066E2600F51C31 /* NavigateSection.swift in Sources */,
 				279C0D822B9828DB00F69815 /* JSONDataTypes.swift in Sources */,
 				F78C77EB228DF74D0017CF2D /* LabelAnnotationView.swift in Sources */,
 				7EEA2CC421CBF454005539F2 /* Venue.swift in Sources */,
+				2778ECC12BB354A500852E11 /* Navigation.swift in Sources */,
 				7E4BF84722160D8B00AE3916 /* Amenity.swift in Sources */,
 				4306A889223825C9005E7E97 /* Styles.swift in Sources */,
 				7EEA2CB521CA3D87005539F2 /* LevelPickerView.swift in Sources */,
