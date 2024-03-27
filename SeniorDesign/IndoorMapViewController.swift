@@ -108,10 +108,21 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     }
     
     @IBAction func navigateButton(_ sender: UIButton) {
-        let currentAddress = CLLocationCoordinate2D(latitude: 37.68107, longitude: -97.27554) // TODO: Make this the blue dot location
-        let coordinates = [currentAddress]
-        // Find the nearest line in the list
-        let closest = closestLine(to: convertToPoint(p: currentAddress), lines: MAP_COORDINATES)
+        let currentAddress = MyPoint(x: 37.68107, y: -97.27554) // TODO: Make this the blue dot location
+        guard let closestLine = closestLine(to: currentAddress, lines: MAP_COORDINATES)
+        else {
+            print("No closest line found")
+            return
+        }
+        let closestPointOnLine = closestPointOnLine(to: currentAddress, line: closestLine)
+        print(closestPointOnLine)
+//        var coordinates = [currentAddress, closestPointOnLine]
+        guard let newCoords = addOtherCoordinates(startingLine: closestLine, startingPoint: closestPointOnLine, destinationPoint: MyPoint(x: 37.68127, y: -97.27462), checkedIntersections: []) else {
+            print("No other coords found")
+            return
+        }
+        print(newCoords)
+        
         
         
 //        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)

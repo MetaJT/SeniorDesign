@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct MyPoint {
+struct MyPoint: Equatable {
     var x: Double
     var y: Double
 }
@@ -42,19 +42,55 @@ let MAP_COORDINATES = [
     
 ]
 
-func convertToPoint(p: CLLocationCoordinate2D) -> MyPoint {
-    return MyPoint(x: p.latitude, y: p.longitude)
-}
-
-func convertToCoord(p: MyPoint) -> CLLocationCoordinate2D {
-    return CLLocationCoordinate2D(latitude: p.x, longitude: p.y)
-}
-
 // Function to calculate the Euclidean distance between two points
 func distanceBetween(_ point1: MyPoint, _ point2: MyPoint) -> Double {
     let dx = point2.x - point1.x
     let dy = point2.y - point1.y
     return sqrt(dx * dx + dy * dy)
+}
+
+// Function to find the point on the closest line that is closest to a given point
+func closestPointOnLine(to point: MyPoint, line: Line) -> MyPoint {
+    let lineVector = MyPoint(x: line.end.x - line.start.x, y: line.end.y - line.start.y)
+    let pointVector = MyPoint(x: point.x - line.start.x, y: point.y - line.start.y)
+    
+    let lineLengthSquared = lineVector.x * lineVector.x + lineVector.y * lineVector.y
+    let t = max(0, min(1, (pointVector.x * lineVector.x + pointVector.y * lineVector.y) / lineLengthSquared))
+    
+    let closestPoint = MyPoint(x: line.start.x + t * lineVector.x, y: line.start.y + t * lineVector.y)
+    return closestPoint
+}
+
+// Function to calculate the intersection point of two lines
+func intersectionPoint(line1: Line, line2: Line) -> MyPoint? {
+    let x1 = line1.start.x
+    let y1 = line1.start.y
+    let x2 = line1.end.x
+    let y2 = line1.end.y
+    
+    let x3 = line2.start.x
+    let y3 = line2.start.y
+    let x4 = line2.end.x
+    let y4 = line2.end.y
+    
+    let denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
+    
+    // Check if the lines are parallel (denominator is zero)
+    if abs(denominator) < 0.0001 {
+        return nil  // Lines are parallel, no intersection point
+    }
+    
+    let xNumerator = (x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)
+    let yNumerator = (x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)
+    
+    let intersectionX = xNumerator / denominator
+    let intersectionY = yNumerator / denominator
+    
+    return MyPoint(x: intersectionX, y: intersectionY)
+}
+
+func convertToCoord(p: MyPoint) -> CLLocationCoordinate2D {
+    return CLLocationCoordinate2D(latitude: p.x, longitude: p.y)
 }
 
 // Function to find the closest line to a given point
@@ -99,4 +135,64 @@ func distanceToLine(_ point: MyPoint, _ line: Line) -> Double {
     
     // Calculate and return the distance between the point and the closest point on the line
     return distanceBetween(point, closestMyPoint)
+}
+
+// Function to calculate the distance between a point and a line segment
+func distanceToLinePoint(_ point: MyPoint, _ line: Line) -> MyPoint {
+    let dx = line.end.x - line.start.x
+    let dy = line.end.y - line.start.y
+    
+    // Calculate the square of the line's length
+    let lineLengthSquared = dx * dx + dy * dy
+    
+    // Avoid division by zero
+    guard lineLengthSquared != 0 else {
+        return line.start
+    }
+    
+    // Calculate the parameter t along the line where the closest point lies
+    let t = max(0, min(1, ((point.x - line.start.x) * dx + (point.y - line.start.y) * dy) / lineLengthSquared))
+    
+    // Calculate the closest point on the line
+    let closestMyPoint = MyPoint(x: line.start.x + t * dx, y: line.start.y + t * dy)
+    return closestMyPoint
+}
+
+// Calculate the rest of the points in the navigation
+func addOtherCoordinates(startingLine: Line, startingPoint: MyPoint, destinationPoint: MyPoint, checkedIntersections: [MyPoint]) -> [MyPoint]? {
+    var ret: [MyPoint] = []
+    var ints = checkedIntersections
+    // fill the rest of the distance if close enough
+    print(distanceBetween(startingPoint, destinationPoint))
+    if (distanceBetween(startingPoint, destinationPoint) < 0.0001) {
+        ret.append(destinationPoint)
+        return ret
+    }
+    // check if any point on the current line is close enough
+    if (distanceToLine(destinationPoint, startingLine) < 0.0001) {
+        ret.append(distanceToLinePoint(destinationPoint, startingLine))
+        ret.append(destinationPoint)
+        return ret
+    }
+    for line in MAP_COORDINATES {
+        guard let intersection = intersectionPoint(line1: line, line2: startingLine) else {
+            continue
+        }
+        if ints.contains(intersection) {
+            continue
+        }
+        ints.append(intersection)
+        print("FEIJOW")
+        if (abs(intersection.x - destinationPoint.x) < abs(startingPoint.x - destinationPoint.x)) || (abs(intersection.y - destinationPoint.y) < abs(startingPoint.y - destinationPoint.y)) { // If the intersection point gets us closer to the destination, explore this route
+            guard let newCoords = addOtherCoordinates(startingLine: line, startingPoint: intersection, destinationPoint: destinationPoint, checkedIntersections: ints) else {
+                continue
+            }
+            ret.append(intersection)
+            for _lol in newCoords {
+                ret.append(_lol)
+            }
+            return ret
+        }
+    }
+    return nil
 }
