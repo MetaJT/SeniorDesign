@@ -129,7 +129,6 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
 
         // Add the polyline to a map view
         self.mapView.addOverlay(self.savedPolyline as MKOverlay)
-        print(self.savedPolylineNavigateCoords)
     }
     func loadJsonData() {
         guard let anchorUrl = Bundle.main.url(forResource: "IMDFData/anchor", withExtension: "geojson")
