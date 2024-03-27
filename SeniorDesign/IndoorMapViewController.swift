@@ -35,6 +35,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var occupantData: [OccupantB] = []
     private var savedLevel: Int = 1
     private var savedPolyline: MKPolyline = MKPolyline(coordinates: [], count: 0)
+    private var savedPolylineNavigateCoords: MyPoint = MyPoint(x: 0, y: 0)
     
     // MARK: - View life cycle
     
@@ -115,20 +116,20 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             return
         }
         let closestPointOnLine = closestPointOnLine(to: currentAddress, line: closestLine)
-        print(closestPointOnLine)
-//        var coordinates = [currentAddress, closestPointOnLine]
-        guard let newCoords = addOtherCoordinates(startingLine: closestLine, startingPoint: closestPointOnLine, destinationPoint: MyPoint(x: 37.68127, y: -97.27462), checkedIntersections: []) else {
+        var coordinates = [convertToCoord(p: currentAddress), convertToCoord(p: closestPointOnLine)]
+        guard let newCoords = addOtherCoordinates(startingLine: closestLine, startingPoint: closestPointOnLine, destinationPoint: self.savedPolylineNavigateCoords, checkedIntersections: []) else {
             print("No other coords found")
             return
         }
-        print(newCoords)
+        for _coord in newCoords {
+            coordinates.append(convertToCoord(p: _coord))
+        }
         
-        
-        
-//        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
-//
-//        // Add the polyline to a map view
-//        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
+        self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
+
+        // Add the polyline to a map view
+        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
+        print(self.savedPolylineNavigateCoords)
     }
     func loadJsonData() {
         guard let anchorUrl = Bundle.main.url(forResource: "IMDFData/anchor", withExtension: "geojson")
@@ -204,6 +205,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
                     let annotation = MKPointAnnotation()
                     let coords: [Double] = lookupAnchorCoords(anchorId: occupant.properties.anchor_id)
                     annotation.coordinate = CLLocationCoordinate2D(latitude: coords[1], longitude: coords[0])
+                    self.savedPolylineNavigateCoords = MyPoint(x: coords[1], y: coords[0])
                     annotation.title = occupant.properties.website + " - " + occupant.properties.name.en
                     self.mapView.addAnnotation(annotation)
                     self.searchAnnotations.append(annotation)

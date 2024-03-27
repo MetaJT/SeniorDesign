@@ -21,9 +21,9 @@ struct Line {
 }
 
 let MAP_COORDINATES = [
-        Line(start: MyPoint(x: 37.68119, y: -97.27576), end: MyPoint(x: 37.68119, y: -97.27412)),
+        Line(start: MyPoint(x: 37.68119, y: -97.27576), end: MyPoint(x: 37.68119, y: -97.27412)), // Large horizontal line
         Line(start: MyPoint(x: 37.68107, y: -97.27552),
-        end: MyPoint(x: 37.68125, y: -97.27552)),
+        end: MyPoint(x: 37.68125, y: -97.27552)), // line by building 3 vertical
 
         Line(start: MyPoint(x: 37.68126, y: -97.27457),
         end: MyPoint(x: 37.68115, y: -97.27457)),
@@ -76,7 +76,7 @@ func intersectionPoint(line1: Line, line2: Line) -> MyPoint? {
     let denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
     
     // Check if the lines are parallel (denominator is zero)
-    if abs(denominator) < 0.0001 {
+    if abs(denominator) < 0.000000001 {
         return nil  // Lines are parallel, no intersection point
     }
     
@@ -163,13 +163,12 @@ func addOtherCoordinates(startingLine: Line, startingPoint: MyPoint, destination
     var ret: [MyPoint] = []
     var ints = checkedIntersections
     // fill the rest of the distance if close enough
-    print(distanceBetween(startingPoint, destinationPoint))
-    if (distanceBetween(startingPoint, destinationPoint) < 0.0001) {
+    if (distanceBetween(startingPoint, destinationPoint) < 0.00008) {
         ret.append(destinationPoint)
         return ret
     }
     // check if any point on the current line is close enough
-    if (distanceToLine(destinationPoint, startingLine) < 0.0001) {
+    if (distanceToLine(destinationPoint, startingLine) < 0.00008) {
         ret.append(distanceToLinePoint(destinationPoint, startingLine))
         ret.append(destinationPoint)
         return ret
@@ -182,7 +181,6 @@ func addOtherCoordinates(startingLine: Line, startingPoint: MyPoint, destination
             continue
         }
         ints.append(intersection)
-        print("FEIJOW")
         if (abs(intersection.x - destinationPoint.x) < abs(startingPoint.x - destinationPoint.x)) || (abs(intersection.y - destinationPoint.y) < abs(startingPoint.y - destinationPoint.y)) { // If the intersection point gets us closer to the destination, explore this route
             guard let newCoords = addOtherCoordinates(startingLine: line, startingPoint: intersection, destinationPoint: destinationPoint, checkedIntersections: ints) else {
                 continue
