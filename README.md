@@ -22,7 +22,7 @@ _Goal: Find a reliable Low Energy Bluetooth beacon that we can use for a sense o
    - **Think this might be the best option**
 5. ~~[Blue Charm Beacnos - BC063B](https://www.amazon.com/Blue-Charm-Beacons-Water-Resistant-BC063B-iBeacon/dp/B07Z1FR6GY/ref=sr_1_10?crid=MUL1TEHMUN8Z&dib=eyJ2IjoiMSJ9.HqGVwXxaQ0RaD0v7qTlpKwYJaUw3AmSz610Z_4E7o6gsm9NaA4heTWCGYC8EuupquQ_gb-mgK4beIfwYUy86_xvZuXhGcLcp9aluBQw-PfIjSOrsDIMZaB1RQQ-p4H-jfMghZcIxAJphUrR-ELUOMQ.8kzVhwEGBgdhF4yJTWfucgKRqsBhB_YIkeFLO8NL_p0&dib_tag=se&keywords=Bluetooth+BLE+iBeacon+%28BC037S-SmoothPattern-iBeacon%29&qid=1708540770&sprefix=bluetooth+ble+ibeacon+bc037s-smoothpattern-ibeacon+%2Caps%2C189&sr=8-10)~~
 
-## Existing Indoor Navigation Frameworks/Source Code
+## Existing Indoor Navigation Sources
 _Goal: Find publicly accessible indoor positioning sources to utilize if needed, as creating our own may not be plausible within this time frame_
 1. https://github.com/schollz/find3.git
 2. https://github.com/neXenio/BLE-Indoor-Positioning.git
