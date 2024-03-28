@@ -28,8 +28,10 @@ _Goal: Find publicly accessible indoor positioning sources to utilize if needed,
    - Supports bluetooth
    - May **only** support Android, according to an older version
 2. [BLE Indoor Positioning Library](https://github.com/neXenio/BLE-Indoor-Positioning.git)
-   - Utilizes bluetooth beacons 
+   - Supports bluetooth
 3. [Navigine SDK](https://github.com/Navigine/Indoor-Navigation-iOS-Mobile-SDK-2.0.git)
    - Exclusively for iOS
    - Supports bluetooth
    - The most up-to-date repo out of all three
+   - Very reputable
+   - [Their website](https://navigine.com/#:~:text=Esther%20Dyson&text=Navigine%20is%20a%20trustworthy%20solution,manage%20system%20and%20outstanding%20service.)
