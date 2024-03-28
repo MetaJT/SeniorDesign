@@ -31,7 +31,7 @@ _Goal: Find publicly accessible indoor positioning sources to utilize if needed,
    - Supports bluetooth
 3. [Navigine SDK](https://github.com/Navigine/Indoor-Navigation-iOS-Mobile-SDK-2.0.git)
    - Exclusively for iOS
-   - Supports bluetooth
+   - Supports bluetooth/iBeacon
    - The most up-to-date repo out of all three
-   - Very reputable
+   - Seems very reputable
    - [Their website](https://navigine.com/#:~:text=Esther%20Dyson&text=Navigine%20is%20a%20trustworthy%20solution,manage%20system%20and%20outstanding%20service.)
