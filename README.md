@@ -26,6 +26,7 @@ _Goal: Find a reliable Low Energy Bluetooth beacon that we can use for a sense o
 _Goal: Find publicly accessible indoor positioning sources to utilize if needed, as creating our own may not be plausible within this time frame_
 1. [FIND Framework](https://github.com/schollz/find3.git)
    - Supports bluetooth
+   - May **only** support Android, according to an older version
 2. [BLE Indoor Positioning Library](https://github.com/neXenio/BLE-Indoor-Positioning.git)
    - Utilizes bluetooth beacons 
 3. [Navigine SDK](https://github.com/Navigine/Indoor-Navigation-iOS-Mobile-SDK-2.0.git)
