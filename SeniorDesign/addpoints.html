@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Add points</title>
+        <style>
+        textarea {
+            tab-size: 1;
+        }
+        </style>
+    </head>
+    <body>
+        Lat: <input type="text" id="lat"><br>
+        Long: <input type="text" id="long"><br>
+        Building Number: <input type="text" id="buildingNum">
+        Room Name: <input type="text" id="roomName">
+        Room type: <input type="text" id="roomType">
+        <button onclick="addPoint();">Add</button><br>
+        <label for="anchorOutput">Anchor Output:</label>
+        <textarea rows="20" cols="60" id="anchorOutput"></textarea>
+        <label for="occupantOutput">Occupant Output:</label>
+        <textarea rows="20" cols="60" id="occupantOutput"></textarea>
+        <script>
+        function uuid() {
+            return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+                (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+            );
+        }
+
+        function selectId(id) {
+            return document.getElementById(id).value;
+        }
+
+        function addPoint() {
+            let anchorUuid = uuid();
+            let newOccupantContent = `{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "${uuid()}",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "${anchorUuid}",
+        "category": "${selectId('roomType')}",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "${selectId('roomName')}"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building ${selectId('buildingNum')}",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},\n`;
+
+    let newAnchorContent = `{
+    "feature_type": "anchor",
+    "geometry": {
+        "coordinates": [
+            ${selectId('long')},
+            ${selectId('lat')}
+        ],
+        "type": "Point"
+    },
+    "id": "${anchorUuid}",
+    "properties": {
+        "address_id": "e105efb7-b0d1-4144-8b8e-72eadf95724f",
+        "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd40"
+    },
+    "type": "Feature"
+},\n`;
+
+            document.querySelector("#anchorOutput").value += newAnchorContent;
+            document.querySelector("#occupantOutput").value += newOccupantContent;
+        }
+        </script>
+    </body>
+</html>

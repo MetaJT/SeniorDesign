@@ -36,6 +36,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var savedLevel: Int = 1
     private var savedPolyline: MKPolyline = MKPolyline(coordinates: [], count: 0)
     private var savedPolylineNavigateCoords: MyPoint = MyPoint(x: 0, y: 0)
+    private var savedAlt: Int = 0
     
     // MARK: - View life cycle
     
@@ -45,19 +46,10 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         searchRoomField.delegate = self
         searchActualRoomField.delegate = self
         
-//        let coordinates = [
-//            CLLocationCoordinate2D(latitude: 37.68136, longitude: -97.27589),
-//            CLLocationCoordinate2D(latitude: 37.68203, longitude: -97.27550),
-//            CLLocationCoordinate2D(latitude: 34.68118, longitude: -97.27495)
-//        ]
-        
         
         loadJsonData()
         
         let navigateSection = NavigateSectionView()
-//        let overlayView = UIView()
-//        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-//        overlayView.frame = CGRect(x: 0, y: 0, width: view.bounds.width/2, height: view.bounds.height/2)
         self.view.addSubview(navigateSection)
         self.view.bringSubviewToFront(navigateSection)
 
