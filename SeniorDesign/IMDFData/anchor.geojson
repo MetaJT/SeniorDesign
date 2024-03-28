@@ -863,7 +863,655 @@
                 "unit_id": "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"
             },
             "type": "Feature"
-        }
+        },
+        {
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "52c22131-9ffa-4734-a5aa-25419d2d5a7c",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "3f1bad1c-44f1-46ff-b217-f3a2d82113bb",
+        "category": "Chief Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "201"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "d665ec43-c7a8-480b-b645-642ea017cc1c",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "e3f13c03-8374-4ef9-9ff4-6fec28ffcc6c",
+        "category": "General Storage",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "202"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "c17f9a57-b861-4140-a9a8-6282fabd6e71",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "4e7659a2-449a-48aa-96f3-ed40a2714413",
+        "category": "Admin Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "203"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "0a2770d4-867d-4d9c-9310-b8848a15761c",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "09993492-e2c5-405a-b288-44c2c1adc331",
+        "category": "Physician Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "204"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "2a09cc4e-74dd-4e5f-bca4-4c1a6bcad662",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "c150d42f-0df3-4535-9520-82100411042b",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "204A"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "3502daf6-3d6b-4c32-a25a-1114d482a78f",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "e0667ca2-e8a9-4725-ab62-cde9bfc91e9c",
+        "category": "Clinical Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "205A"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "28182255-fefc-429f-9656-7738d93e2935",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "73d109f6-9503-4fd4-a15e-7cfb624a9be9",
+        "category": "Clinical Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "205"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "71fea5e6-8ae7-447e-a9b8-f0351d28d6d8",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "2271e4c8-9eae-49f9-91ef-5f28f54e2d8d",
+        "category": "Women's Restroom",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "Women's Restroom"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "dcf8650a-42a1-4d66-ac08-a00e2fcb4a5f",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "dc731c78-60fc-4643-9ab1-ad79a228f5df",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "200B"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "66b25f8c-237b-42d3-aeca-fe64e5974cef",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "75976c89-6d79-4a3c-9159-894aad01e2d3",
+        "category": "Chief Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "221"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "cc6563a0-b82b-4cf8-a211-27c5ba1b0586",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "3887d45a-bebe-473a-a569-c54b0b0232c6",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "220"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "3cd15134-3e3d-45b1-86ee-26bb8adb5588",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "25b83e55-6e87-4187-93a6-dcf2059ccc1a",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "219A"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "b637637e-622a-4752-83d2-ebe369f45064",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "d9da169b-3555-4538-a8e6-656190f495bf",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "219"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "b10638b9-cadd-40cd-a8e6-ec5b0dbd5a17",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "46e13367-5fdb-4aa0-945c-e4f9c12742d5",
+        "category": "Physician Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "218"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "fcc7053b-c23a-4a3b-a7a0-e86ead800b0b",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "08c27aef-3454-4ba2-ade3-b26be8027753",
+        "category": "Exam Room",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "217"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "dfe96c18-d6dc-4d32-960d-aeaa370d426a",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "e5cadb15-ae86-4312-b0ee-3da4dc60fc53",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "216"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "78f2c00b-7c5a-4129-951b-3d022ff05264",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "2b125f05-57d0-4adb-953b-aa293cd5e29b",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "215"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "5a58a9e9-c3ca-46af-a52c-0995c61ab544",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "2070eaba-9272-4557-b5aa-390f31104627",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "214"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "84e860b2-9eab-410f-a49b-bb6d27730b77",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "ae1625a3-cfbd-48d7-8a50-a0eaaa866d5e",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "213"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "0ae1153c-4a40-4854-b2ec-dc37334993d3",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "d9f5b74c-99b7-4818-ab2a-8023ceaf1abe",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "212"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "296d9a41-63b7-45a4-87ae-d1d360d99205",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "a20c5b32-8739-451b-9cba-1277d37664e8",
+        "category": "Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "211"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "67f47cc7-7e94-4b87-8297-378c40275b28",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "ded5eb22-2c0e-4837-a930-f908de9e8bb8",
+        "category": "Chief Office",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "210"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "dbb9a05a-9e75-4327-abca-5335963f5de0",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "c1b5d285-eb46-489b-967f-f7a5eafdeb76",
+        "category": "Housekeeping Closet",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "208"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
+{
+    "feature_type": "occupant"
+    "geometry": null,
+    "id": "b112ca21-8f2e-40a2-bc61-d514584b9708",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "8af05ede-027f-4a0a-8278-3fe0835623e3",
+        "category": "Telephone Closet",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "207"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 3",
+        "correlation_id": null
+    },
+    "type": "Feature"
+}
     ],
     "name": "Anchor",
     "type": "FeatureCollection"
