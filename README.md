@@ -32,3 +32,4 @@ _Goal: Find publicly accessible indoor positioning sources to utilize if needed,
 3. [Navigine SDK](https://github.com/Navigine/Indoor-Navigation-iOS-Mobile-SDK-2.0.git)
    - Exclusively for iOS
    - No mentions of bluetooth compatibility
+   - The most up-to-date repo out of all three
