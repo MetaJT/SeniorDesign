@@ -1459,7 +1459,7 @@
             "type": "Feature"
         },
         {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "52c22131-9ffa-4734-a5aa-25419d2d5a7c",
     "properties": {
@@ -1486,7 +1486,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "d665ec43-c7a8-480b-b645-642ea017cc1c",
     "properties": {
@@ -1513,7 +1513,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "c17f9a57-b861-4140-a9a8-6282fabd6e71",
     "properties": {
@@ -1540,7 +1540,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "0a2770d4-867d-4d9c-9310-b8848a15761c",
     "properties": {
@@ -1567,7 +1567,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "2a09cc4e-74dd-4e5f-bca4-4c1a6bcad662",
     "properties": {
@@ -1594,7 +1594,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "3502daf6-3d6b-4c32-a25a-1114d482a78f",
     "properties": {
@@ -1621,7 +1621,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "28182255-fefc-429f-9656-7738d93e2935",
     "properties": {
@@ -1648,7 +1648,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "71fea5e6-8ae7-447e-a9b8-f0351d28d6d8",
     "properties": {
@@ -1675,7 +1675,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "dcf8650a-42a1-4d66-ac08-a00e2fcb4a5f",
     "properties": {
@@ -1702,7 +1702,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "66b25f8c-237b-42d3-aeca-fe64e5974cef",
     "properties": {
@@ -1729,7 +1729,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "cc6563a0-b82b-4cf8-a211-27c5ba1b0586",
     "properties": {
@@ -1756,7 +1756,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "3cd15134-3e3d-45b1-86ee-26bb8adb5588",
     "properties": {
@@ -1783,7 +1783,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "b637637e-622a-4752-83d2-ebe369f45064",
     "properties": {
@@ -1810,7 +1810,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "b10638b9-cadd-40cd-a8e6-ec5b0dbd5a17",
     "properties": {
@@ -1837,7 +1837,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "fcc7053b-c23a-4a3b-a7a0-e86ead800b0b",
     "properties": {
@@ -1864,7 +1864,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "dfe96c18-d6dc-4d32-960d-aeaa370d426a",
     "properties": {
@@ -1891,7 +1891,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "78f2c00b-7c5a-4129-951b-3d022ff05264",
     "properties": {
@@ -1918,7 +1918,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "5a58a9e9-c3ca-46af-a52c-0995c61ab544",
     "properties": {
@@ -1945,7 +1945,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "84e860b2-9eab-410f-a49b-bb6d27730b77",
     "properties": {
@@ -1972,7 +1972,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "0ae1153c-4a40-4854-b2ec-dc37334993d3",
     "properties": {
@@ -1999,7 +1999,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "296d9a41-63b7-45a4-87ae-d1d360d99205",
     "properties": {
@@ -2026,7 +2026,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "67f47cc7-7e94-4b87-8297-378c40275b28",
     "properties": {
@@ -2053,7 +2053,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "dbb9a05a-9e75-4327-abca-5335963f5de0",
     "properties": {
@@ -2080,7 +2080,7 @@
     "type": "Feature"
 },
 {
-    "feature_type": "occupant"
+    "feature_type": "occupant",
     "geometry": null,
     "id": "b112ca21-8f2e-40a2-bc61-d514584b9708",
     "properties": {
@@ -2105,7 +2105,8 @@
         "correlation_id": null
     },
     "type": "Feature"
-}
+},
+
     ],
     "name": "Occupant",
     "type": "FeatureCollection"
