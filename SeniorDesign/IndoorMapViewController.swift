@@ -35,8 +35,9 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var occupantData: [OccupantB] = []
     private var savedLevel: Int = 1
     private var savedPolyline: MKPolyline = MKPolyline(coordinates: [], count: 0)
-    private var savedPolylineNavigateCoords: MyPoint = MyPoint(x: 0, y: 0)
-    private var savedAlt: Int = 0
+    private var savedPolylineNavigateCoords: [NavigationFormat] = []
+    private var savedAlt: Double = 0.0
+    private var inRoute: String = "none" // variable that will be used to update route as user goes to different floors
     
     // MARK: - View life cycle
     
@@ -46,12 +47,7 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         searchRoomField.delegate = self
         searchActualRoomField.delegate = self
         
-        
         loadJsonData()
-        
-        let navigateSection = NavigateSectionView()
-        self.view.addSubview(navigateSection)
-        self.view.bringSubviewToFront(navigateSection)
 
         // Request location authorization so the user's current location can be displayed on the map
         locationManager.requestWhenInUseAuthorization()
@@ -59,8 +55,6 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         self.mapView.delegate = self
         self.mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: pointAnnotationViewIdentifier)
         self.mapView.register(LabelAnnotationView.self, forAnnotationViewWithReuseIdentifier: labelAnnotationViewIdentifier)
-        
-        self.mapView.addOverlay(self.savedPolyline as MKOverlay)
 
         // Decode the IMDF data. In this case, IMDF data is stored locally in the current bundle.
         let imdfDirectory = Bundle.main.resourceURL!.appendingPathComponent("IMDFData")
@@ -101,25 +95,54 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     }
     
     @IBAction func navigateButton(_ sender: UIButton) {
+        if self.savedPolylineNavigateCoords.count == 0 {
+            return
+        }
         let currentAddress = MyPoint(x: 37.68107, y: -97.27554) // TODO: Make this the blue dot location
-        guard let closestLine = closestLine(to: currentAddress, lines: MAP_COORDINATES)
-        else {
-            print("No closest line found")
-            return
-        }
-        let closestPointOnLine = closestPointOnLine(to: currentAddress, line: closestLine)
-        var coordinates = [convertToCoord(p: currentAddress), convertToCoord(p: closestPointOnLine)]
-        guard let newCoords = addOtherCoordinates(startingLine: closestLine, startingPoint: closestPointOnLine, destinationPoint: self.savedPolylineNavigateCoords, checkedIntersections: []) else {
-            print("No other coords found")
-            return
-        }
-        for _coord in newCoords {
-            coordinates.append(convertToCoord(p: _coord))
+        let currentLevel = determineLevelFromAltitude(altitude: self.savedAlt)
+        
+        // Determine the point to navigate to
+        var savedPoint = self.savedPolylineNavigateCoords[0]
+        var closestDistance = Double.infinity
+        for _coord in self.savedPolylineNavigateCoords {
+            var distance = distanceBetween(_coord.point, currentAddress)
+            distance += Double(abs(currentLevel - _coord.level))*2.0
+            if distance < closestDistance {
+                closestDistance = distance
+                savedPoint = _coord
+            }
         }
         
+        // If the nearest point is on a different floor, navigate to the nearest elevator
+        closestDistance = Double.infinity
+        var takingElevator = false
+        if savedPoint.level != currentLevel {
+            for elevator_map in ELEVATOR_LOCATION_MAP {
+                let distance = distanceBetween(elevator_map.location, currentAddress)
+                if distance < closestDistance {
+                    savedPoint.point = elevator_map.location
+                    closestDistance = distance
+                    takingElevator = true
+                }
+            }
+        }
+        
+        if takingElevator == true {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: savedPoint.point.x, longitude: savedPoint.point.y)
+            annotation.title = "Take the elevator to level " + String(savedPoint.level)
+            self.mapView.addAnnotation(annotation)
+            self.searchAnnotations.append(annotation)
+        }
+        
+        let coordinates = performNavigation(currentAddress: currentAddress, destinationPoint: savedPoint.point)
+        if coordinates.count == 0 {
+            return
+        }
         self.savedPolyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
 
         // Add the polyline to a map view
+        self.inRoute = "true"
         self.mapView.addOverlay(self.savedPolyline as MKOverlay)
     }
     func loadJsonData() {
@@ -158,9 +181,24 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         return []
     }
     
+    func lookupLevelNumber(anchorId: String) -> Int {
+        for anchor in self.anchorData {
+            if anchor.id == anchorId {
+                for anchor_level in ANCHOR_LEVEL_MAP {
+                    if anchor_level.anchorUuid == anchor.properties.unit_id {
+                        return anchor_level.level
+                    }
+                }
+            }
+        }
+        return 0
+    }
+    // unit_id    String    "9aab1fa4-8e7e-47b1-a40f-8269047ccd40"
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.mapView.removeAnnotations(self.searchAnnotations)
         self.mapView.removeOverlay(self.savedPolyline as MKOverlay)
+        self.inRoute = "none"
+        self.savedPolylineNavigateCoords = []
         self.searchAnnotations = []
         if levelPicker.selectedIndex != nil {
             self.savedLevel = levelPicker.selectedIndex!
@@ -196,10 +234,10 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
                     let annotation = MKPointAnnotation()
                     let coords: [Double] = lookupAnchorCoords(anchorId: occupant.properties.anchor_id)
                     annotation.coordinate = CLLocationCoordinate2D(latitude: coords[1], longitude: coords[0])
-                    self.savedPolylineNavigateCoords = MyPoint(x: coords[1], y: coords[0])
                     annotation.title = occupant.properties.website + " - " + occupant.properties.name.en
                     self.mapView.addAnnotation(annotation)
                     self.searchAnnotations.append(annotation)
+                    self.savedPolylineNavigateCoords.append(NavigationFormat(point: MyPoint(x: coords[1], y: coords[0]), level: lookupLevelNumber(anchorId: occupant.properties.anchor_id)))
                     
                     // Clear out the previously-displayed level's geometry
                     self.currentLevelFeatures.removeAll()
@@ -225,6 +263,8 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         self.currentLevelFeatures.removeAll()
         self.mapView.removeOverlays(self.currentLevelOverlays)
         self.mapView.removeAnnotations(self.currentLevelAnnotations)
+        self.mapView.removeOverlay(self.savedPolyline as MKOverlay)
+        self.inRoute = "none"
         self.currentLevelAnnotations.removeAll()
         self.currentLevelOverlays.removeAll()
 

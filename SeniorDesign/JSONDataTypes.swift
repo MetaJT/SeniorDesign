@@ -12,9 +12,14 @@ struct Geometry: Codable {
     var coordinates: [Double] = []
 }
 
+struct Property_Anchor: Codable {
+    var unit_id:String = ""
+}
+
 struct AnchorB: Codable {
     var id:String = ""
     var geometry:Geometry
+    var properties:Property_Anchor
 }
 
 struct MainAnchor: Codable {

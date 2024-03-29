@@ -14,11 +14,38 @@ struct MyPoint: Equatable {
     var y: Double
 }
 
+struct NavigationFormat {
+    var point: MyPoint
+    var level: Int
+}
+
 // Define a structure to represent a line segment (with endpoints)
 struct Line {
     var start: MyPoint
     var end: MyPoint
 }
+
+struct AnchorLevelMap {
+    var level: Int
+    var anchorUuid: String
+}
+
+struct ElevatorLocationMap {
+    var level: Int
+    var location: MyPoint
+}
+
+// UPDATE THESE AS MORE LEVELS GET ADDED
+let ANCHOR_LEVEL_MAP = [
+    AnchorLevelMap(level: 1, anchorUuid: "9aab1fa4-8e7e-47b1-a40f-8269047ccd40"),
+    AnchorLevelMap(level: 2, anchorUuid: "9aab1fa4-8e7e-47b1-a40f-8269047ccd42"),
+]
+
+// UPDATE THESE WHENEVER AN ELEVATOR LOCATION IS ADDED
+let ELEVATOR_LOCATION_MAP = [
+    ElevatorLocationMap(level: 2, location: MyPoint(x: 37.68124, y: -97.27462)),
+    ElevatorLocationMap(level: 1, location: MyPoint(x: 37.68122, y: -97.27460)),
+]
 
 let MAP_COORDINATES = [
         Line(start: MyPoint(x: 37.68119, y: -97.27576), end: MyPoint(x: 37.68119, y: -97.27412)), // Large horizontal line
@@ -193,4 +220,31 @@ func addOtherCoordinates(startingLine: Line, startingPoint: MyPoint, destination
         }
     }
     return nil
+}
+
+func performNavigation(currentAddress: MyPoint, destinationPoint: MyPoint) -> [CLLocationCoordinate2D] {
+    guard let closestLine = closestLine(to: currentAddress, lines: MAP_COORDINATES)
+    else {
+        print("No closest line found")
+        return []
+    }
+    let closestPointOnLine = closestPointOnLine(to: currentAddress, line: closestLine)
+    var coordinates = [convertToCoord(p: currentAddress), convertToCoord(p: closestPointOnLine)]
+    guard let newCoords = addOtherCoordinates(startingLine: closestLine, startingPoint: closestPointOnLine, destinationPoint: destinationPoint, checkedIntersections: []) else {
+        print("No other coords found")
+        return []
+    }
+    for _coord in newCoords {
+        coordinates.append(convertToCoord(p: _coord))
+    }
+    return coordinates
+}
+
+func determineLevelFromAltitude(altitude: Double) -> Int {
+    // TODO: This will need to be more complete when we have a way to get the user's actual altitude
+    if (altitude == 0.0) {
+        return 1
+    } else {
+        return 2
+    }
 }
