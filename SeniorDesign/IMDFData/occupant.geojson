@@ -2080,7 +2080,33 @@
     },
     "type": "Feature"
 },
-
+{
+    "feature_type": "occupant",
+    "geometry": null,
+    "id": "b112ca21-8f2e-40a2-bc61-d514584b9709",
+    "properties": {
+        "address_id": null,
+        "alt_name": null,
+        "anchor_id": "8af05ede-027f-4a0a-8278-3fe0835623e4",
+        "category": "Elevator",
+        "display_point": {
+            "coordinates": [
+-66.6666,
+66.6666
+],
+            "type": "Point"
+        },
+        "hours": "Su-Sa 09:00-17:00",
+        "name": {
+            "en": "Elevator"
+        },
+        "phone": "+14087924512",
+        "restriction": null,
+        "website": "Building 1",
+        "correlation_id": null
+    },
+    "type": "Feature"
+},
     ],
     "name": "Occupant",
     "type": "FeatureCollection"
