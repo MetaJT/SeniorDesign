@@ -1485,33 +1485,7 @@
     },
     "type": "Feature"
 },
-{
-    "feature_type": "occupant",
-    "geometry": null,
-    "id": "d665ec43-c7a8-480b-b645-642ea017cc1c",
-    "properties": {
-        "address_id": null,
-        "alt_name": null,
-        "anchor_id": "e3f13c03-8374-4ef9-9ff4-6fec28ffcc6c",
-        "category": "General Storage",
-        "display_point": {
-            "coordinates": [
--66.6666,
-66.6666
-],
-            "type": "Point"
-        },
-        "hours": "Su-Sa 09:00-17:00",
-        "name": {
-            "en": "202"
-        },
-        "phone": "+14087924512",
-        "restriction": null,
-        "website": "Building 3",
-        "correlation_id": null
-    },
-    "type": "Feature"
-},
+
 {
     "feature_type": "occupant",
     "geometry": null,
