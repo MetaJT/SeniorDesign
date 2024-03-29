@@ -10,12 +10,13 @@ import CoreLocation
 import MapKit
 import SwiftUI
 
-class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate, UISearchBarDelegate {
+class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate, UISearchBarDelegate, CLLocationManagerDelegate{
     @IBOutlet var mapView: MKMapView!
     private let locationManager = CLLocationManager()
     @IBOutlet var levelPicker: LevelPickerView!
     @IBOutlet var searchRoomField: UISearchBar!
     @IBOutlet var searchActualRoomField: UISearchBar!
+    @IBOutlet weak var distanceLabel: UILabel! // Just for demonstration of beacon distance
     
     @State private var buildingSearchText: String = ""
 //    @FocusState private var buildingSearchTextFocused: Bool
@@ -45,7 +46,6 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         
         searchRoomField.delegate = self
         searchActualRoomField.delegate = self
-        
         
         loadJsonData()
         
@@ -98,6 +98,39 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         // Setup the level picker with the shortName of each level
         setupLevelPicker()
         
+    }
+    // If user allows location checks while using check if beacon monitoring is available
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    startScanning()
+                }
+            }
+        }
+    }
+    
+    func startScanning() {
+        let uuid = UUID(uuidString: "1B6295D5-4F74-4C58-A2D8-CD83CA26BDF4")! // Beacons UUID
+        let beaconRegion = CLBeaconRegion(uuid: uuid, major: 123, minor: 456, identifier: "myBeacon1")
+        
+        locationManager.startMonitoring(for: beaconRegion)
+        locationManager.startRangingBeacons(satisfying: beaconRegion.beaconIdentityConstraint)
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
+            if let closestBeacon = beacons.first {
+                let distance = closestBeacon.accuracy
+                updateDistance(distance)
+            }
+        }
+    
+    func updateDistance(_ distance: CLLocationAccuracy) {
+        let formattedDistance = String(format: "%.2f meters", distance)
+        DispatchQueue.main.async {
+                    self.distanceLabel.text = "Distance to Beacon: \(formattedDistance)"
+        }
     }
     
     @IBAction func navigateButton(_ sender: UIButton) {
