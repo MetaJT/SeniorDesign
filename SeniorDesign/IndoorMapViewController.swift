@@ -10,15 +10,14 @@ import CoreLocation
 import MapKit
 import SwiftUI
 
-class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate, UISearchBarDelegate {
+class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerDelegate, UISearchBarDelegate, CLLocationManagerDelegate {
     @IBOutlet var mapView: MKMapView!
-    private let locationManager = CLLocationManager()
     @IBOutlet var levelPicker: LevelPickerView!
     @IBOutlet var searchRoomField: UISearchBar!
     @IBOutlet var searchActualRoomField: UISearchBar!
     
     @State private var buildingSearchText: String = ""
-//    @FocusState private var buildingSearchTextFocused: Bool
+    //    @FocusState private var buildingSearchTextFocused: Bool
     @State private var roomSearchText: String = ""
     
     
@@ -38,6 +37,8 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     private var savedPolylineNavigateCoords: [NavigationFormat] = []
     private var savedAlt: Double = 0.0
     private var inRoute: String = "none" // variable that will be used to update route as user goes to different floors
+    private var locationManager: CLLocationManager?
+    private var currentUserLocation: Point3D = Point3D(x: 0, y: 0, z: 0)
     
     // MARK: - View life cycle
     
@@ -48,14 +49,16 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         searchActualRoomField.delegate = self
         
         loadJsonData()
-
+        
         // Request location authorization so the user's current location can be displayed on the map
-        locationManager.requestWhenInUseAuthorization()
-
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        
         self.mapView.delegate = self
         self.mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: pointAnnotationViewIdentifier)
         self.mapView.register(LabelAnnotationView.self, forAnnotationViewWithReuseIdentifier: labelAnnotationViewIdentifier)
-
+        
         // Decode the IMDF data. In this case, IMDF data is stored locally in the current bundle.
         let imdfDirectory = Bundle.main.resourceURL!.appendingPathComponent("IMDFData")
         do {
@@ -83,15 +86,70 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
         // Set the map view's region to enclose the venue
         if let venue = venue, let venueOverlay = venue.geometry[0] as? MKOverlay {
             self.mapView.setVisibleMapRect(venueOverlay.boundingMapRect, edgePadding:
-                UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20), animated: false)
+                                            UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20), animated: false)
         }
-
+        
         // Display a default level at start, for example a level with ordinal 0
         showFeaturesForOrdinal(0)
         
         // Setup the level picker with the shortName of each level
         setupLevelPicker()
         
+    }
+
+    // If user allows location checks while using check if beacon monitoring is available
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            print("Authorized")
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                print("Check")
+                if CLLocationManager.isRangingAvailable() {
+                    print("Scanning")
+                    startScanning()
+                }
+            }
+            else {
+                print("Monitoring is not available.")
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
+        if let closestBeacon = beacons.first {
+            let distance = closestBeacon.accuracy
+            if closestBeacon.rssi != 0 {
+                updateDistance(distance / 87935.97568, uuid: closestBeacon.uuid) // convert meters to coordinate-distance
+            }
+        }
+    }
+    
+    func startScanning() {
+        for beacon in BEACONS_LIST {
+            let uuid = UUID(uuidString: beacon.uuid)!
+            let beaconRegion = CLBeaconRegion(uuid: uuid, major: beacon.majorId, minor: beacon.minorId, identifier: "id")
+            
+            locationManager?.startMonitoring(for: beaconRegion)
+            locationManager?.startRangingBeacons(satisfying: beaconRegion.beaconIdentityConstraint)
+        }
+    }
+    
+    func updateDistance(_ distance: CLLocationAccuracy, uuid: UUID) {
+        if let row = BEACONS_LIST.firstIndex(where: {UUID(uuidString: $0.uuid) == uuid}) {
+            BEACONS_LIST[row] = Beacon(uuid: BEACONS_LIST[row].uuid, majorId: BEACONS_LIST[row].majorId, minorId: BEACONS_LIST[row].minorId, x: BEACONS_LIST[row].x, y: BEACONS_LIST[row].y, z: BEACONS_LIST[row].z, distance: distance)
+        }
+        
+        var knownPoints: [Point3D] = []
+        var distances: [Double] = []
+        for beacon in BEACONS_LIST {
+            knownPoints.append(Point3D(x: beacon.x, y: beacon.y, z: beacon.z))
+            distances.append(beacon.distance)
+        }
+        if let userCoords = trilaterate(knownPoints: knownPoints, distances: distances) {
+            print("User's coordinates: \(userCoords)")
+            self.currentUserLocation = userCoords
+        } else {
+            print("Trilateration failed")
+        }
     }
     
     @IBAction func navigateButton(_ sender: UIButton) {

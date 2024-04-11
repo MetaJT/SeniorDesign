@@ -10,6 +10,7 @@
 		274B548B2B05E2B900F51C31 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B548A2B05E2B900F51C31 /* helpers.swift */; };
 		2778ECC12BB354A500852E11 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2778ECC02BB354A500852E11 /* Navigation.swift */; };
 		279C0D822B9828DB00F69815 /* JSONDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C0D812B9828DB00F69815 /* JSONDataTypes.swift */; };
+		27EC57E82BC779BD009CBF37 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EC57E72BC779BC009CBF37 /* Beacon.swift */; };
 		4306A889223825C9005E7E97 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4306A888223825C9005E7E97 /* Styles.swift */; };
 		4353A0932228CD9600F2977B /* IMDFData in Resources */ = {isa = PBXBuildFile; fileRef = 4353A0922228CD9500F2977B /* IMDFData */; };
 		436217FD2256A4800075E16C /* LocalizedName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436217FC2256A4800075E16C /* LocalizedName.swift */; };
@@ -39,6 +40,7 @@
 		274B548A2B05E2B900F51C31 /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		2778ECC02BB354A500852E11 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		279C0D812B9828DB00F69815 /* JSONDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataTypes.swift; sourceTree = "<group>"; };
+		27EC57E72BC779BC009CBF37 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		4306A888223825C9005E7E97 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		4353A0922228CD9500F2977B /* IMDFData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IMDFData; sourceTree = "<group>"; };
 		436217FC2256A4800075E16C /* LocalizedName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedName.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				7E61CF06215E1FF600EAD172 /* Assets.xcassets */,
 				274B548A2B05E2B900F51C31 /* helpers.swift */,
 				2778ECC02BB354A500852E11 /* Navigation.swift */,
+				27EC57E72BC779BC009CBF37 /* Beacon.swift */,
 			);
 			path = SeniorDesign;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				279C0D822B9828DB00F69815 /* JSONDataTypes.swift in Sources */,
 				F78C77EB228DF74D0017CF2D /* LabelAnnotationView.swift in Sources */,
 				7EEA2CC421CBF454005539F2 /* Venue.swift in Sources */,
+				27EC57E82BC779BD009CBF37 /* Beacon.swift in Sources */,
 				2778ECC12BB354A500852E11 /* Navigation.swift in Sources */,
 				7E4BF84722160D8B00AE3916 /* Amenity.swift in Sources */,
 				4306A889223825C9005E7E97 /* Styles.swift in Sources */,
@@ -423,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6H99C5TPQJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -450,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6H99C5TPQJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(LOCAL_LIBRARY_DIR)/Frameworks",
