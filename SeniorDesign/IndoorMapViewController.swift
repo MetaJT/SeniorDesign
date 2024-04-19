@@ -117,8 +117,9 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
     func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
         if let closestBeacon = beacons.first {
             let distance = closestBeacon.accuracy
-            if closestBeacon.rssi != 0 {
-                updateDistance(distance / 87935.97568, uuid: closestBeacon.uuid) // convert meters to coordinate-distance
+            if closestBeacon.rssi != 0 && closestBeacon.rssi > -70 {
+                updateDistance(distance, uuid: closestBeacon.uuid)
+                //updateDistance(distance / 87935.97568, uuid: closestBeacon.uuid) // convert meters to coordinate-distance
             }
         }
     }
@@ -144,11 +145,12 @@ class IndoorMapViewController: UIViewController, MKMapViewDelegate, LevelPickerD
             knownPoints.append(Point3D(x: beacon.x, y: beacon.y, z: beacon.z))
             distances.append(beacon.distance)
         }
+//        print(distances)
         if let userCoords = trilaterate(knownPoints: knownPoints, distances: distances) {
-            print("User's coordinates: \(userCoords)")
+            //print("User's coordinates: \(userCoords)")
             self.currentUserLocation = userCoords
         } else {
-            print("Trilateration failed")
+//            print("Trilateration failed")
         }
     }
     
